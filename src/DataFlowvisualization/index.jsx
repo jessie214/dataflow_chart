@@ -4,7 +4,7 @@ import { Tabs, List, Space, message, Select, Input, Button, Drawer, Divider, Col
 import ChartDataFlow from './ChartDataFlow';
 import ChartDataFlowSmall from './ChartDataFlowSmall';
 import { Rnd } from "react-rnd";
-import './index.less';
+import './index.css';
 import data from '../data/flowData'
 import 'antd/dist/reset.css';
 
@@ -191,7 +191,7 @@ const Index = (props) => {
     <div className="DataFlowvisualizationDiv">
       <div className="smallChart">
         <Collapse bordered={false} defaultActiveKey={['1']} >
-          <Panel header="数据流概览" key="1">
+          <Panel header="overview" key="1">
             <p style={{ width: '100%', height: '100%', marginBottom: '0px',position:'relative' }} className='resetBox'>
             <Rnd
              default={{
@@ -218,75 +218,7 @@ const Index = (props) => {
           </Panel>
         </Collapse>
       </div>
-      <div className="actionBtn" onClick={() => showDrawer()}>
-        {/* <MenuUnfoldOutlined /> */}@
-      </div>
-      <Drawer
-        title=" "
-        placement="right"
-        closable={false}
-        onClose={onClose}
-        visible={visible}
-        getContainer={false}
-        mask={false}
-        maskClosable={false}
-        className="drawerDiv"
-        style={{
-          position: 'absolute',
-        }}
-      >
-        <div className="detailList">
-          <div className="title">
-            {renderIcon()}
-            <div>
-              <p>{datasetDetail?.name}</p>
-              <p style={{ color: 'rgba(0,0,0,0.65)' }}>{datasetDetail?.createTime}</p>
-            </div>
-          </div>
-          <div className="list">
-            <div>
-              <span>数据类型</span>
-              <Divider type="vertical" />
-              {datasetDetail?.dataTypeName}
-            </div>
-            <div>
-              <span>所属课题</span>
-              <Divider type="vertical" />
-              {datasetDetail?.projectName}
-            </div>
-            <div>
-              <span>所属任务</span>
-              <Divider type="vertical" />
-              {datasetDetail?.taskName}
-            </div>
-            <div>
-              <span>操作动作</span>
-              <Divider type="vertical" />
-              {datasetDetail?.jobType}
-            </div>
-            <div>
-              <span>数据属性</span>
-              <Divider type="vertical" />
-              {datasetDetail?.dataSourcePathName}
-            </div>
-            <div>
-              <span>创建人</span>
-              <Divider type="vertical" />
-              {datasetDetail?.createUserDisplayName}
-            </div>
-            <div>
-              <span>行数</span>
-              <Divider type="vertical" />
-              {datasetDetail?.lineCount}
-            </div>
-            <div>
-              <span>列数</span>
-              <Divider type="vertical" />
-              {datasetDetail?.columnCount}
-            </div>
-          </div>
-        </div>
-      </Drawer>
+    
       <div className='chartMainBox' ref={chartViewRef}>
         <ChartDataFlow
           nodeData={nodeData}

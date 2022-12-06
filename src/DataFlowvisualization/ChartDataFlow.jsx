@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 // import { Card, message, Radio, Typography } from 'antd';
-import styles from '../index.less';
 import * as echarts from 'echarts';
 // import { getDataProperty } from '@/pages/task/definitions/taskConfig';
 

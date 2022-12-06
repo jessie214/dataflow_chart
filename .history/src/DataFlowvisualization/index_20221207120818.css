@@ -1,0 +1,176 @@
+.DataFlowvisualizationDiv {
+  position: relative;
+  height: calc(100vh - 170px);
+  margin: 0px 50px 30px;
+  padding: 20px 50px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 4px;
+ 
+}
+
+.chartMainBox{
+  width:100%;
+  height: calc( 100% - 100px);
+  overflow: auto;
+}
+.actionBtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  width: 48px;
+  height: 28px;
+  text-align: center;
+  background: #b6c1f0;
+  border-radius: 0px 4px 0px 0px;
+  cursor: pointer;
+}
+/* .drawerDiv {} */
+  .ant-drawer-body{
+    padding:15px;
+  }
+  .ant-drawer-header {
+    height: 29px;
+    padding: 0px 20px;
+    background: #d5dcfa;
+  }
+  
+  .detailList  .title {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    
+  }
+  .detailList  .title  p {
+    margin-bottom: 0px;
+    margin-left: 10px;
+  }
+  .detailList  .list {
+    margin-left: 10px;
+ 
+  }
+  .detailList  .list  div {
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .detailList  .list span {
+    display: inline-block;
+    width: 55px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+  }
+  .detailList  .ant-divider {
+    margin-right: 15px;
+  }
+
+
+
+.timelinebox {       
+  padding-right:20px;
+  margin-top:15px;
+  width:100%;
+  position: relative;
+  margin-bottom:20px;
+ 
+}
+.timelinebox .bgBox{
+  background-color:#efefef;
+  height:20px;
+  line-height:20px;
+  width:100%;
+  display: flex; 
+}
+.timelinebox p {
+  flex: 1;
+  margin-bottom:0px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  padding:0px 25px;
+
+}
+.timelinebox p span {
+  position: relative;
+}
+
+.timelinebox  > p:last-child {
+  text-align: right;
+}
+.timelinebox .triangle{
+  width: 0;
+  height: 0;  
+  border-top: 10px solid transparent;  
+  border-left: 15px solid #ffffff;  
+  border-bottom: 10px solid transparent;
+}
+.timelinebox .rightTriangle{
+  margin-top:-10px;
+  margin-right:-20px;
+  width: 0;
+  height: 0;  
+  border-top: 20px solid transparent;  
+  border-left: 20px solid #efefef;
+  border-bottom: 20px solid transparent;
+}
+.colorListBox {
+  margin-bottom:0px;
+
+}
+.colorListBox li {
+  display: inline-block;
+  font-size: 12px;
+  color: rgba(0,0,0,0.65);
+  margin-right:15px;
+}
+.colorListBox i {
+  display: inline-block;
+  width: 3px;
+  background-color: coral;
+  height: 10px;
+  margin-right: 3px;
+}
+
+.smallChart{
+  width:200px;
+  position: absolute;
+  z-index: 9;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+ 
+}
+
+.smallChart .ant-collapse > .ant-collapse-item > .ant-collapse-header{
+  padding:0px 16px;
+  line-height: 25px;
+  background: #D5DCFA;    
+  font-size: 12px;
+  color: #303030;  
+}
+.smallChart .ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box{
+  background-color: #ffffff;
+  padding-top:15px;
+}
+
+.smallChart .resetBox .react-draggable{
+  z-index: 100;
+}
+.smallChart .resetBox .setToolBox{
+  width:100%;
+  height:100%;
+  border:1px rgba(47,84,235,1) solid;
+  position: relative;
+
+}
+.smallChart .resetBox ::after{
+  content:' ';
+  width:10px;
+  height:10px;
+  background: #2F54EB;
+  border: 1px solid rgba(255,255,255,1);
+  position: absolute;
+  right: -5px;
+  bottom:-5px;
+}
