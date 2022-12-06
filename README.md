@@ -2,9 +2,8 @@
 ![image](https://github.com/jessie214/dataflow_chat/blob/main/img/dataflow.gif)
 =======
 
-Change window size by dragging
->>>>>>> 727b4a02b079512951d913526348c5e2cc962f2d
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Change window size by dragging.
+The process of data formation and splitting is shown graphically
 
 ## Available Scripts
 
