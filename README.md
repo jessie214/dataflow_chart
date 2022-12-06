@@ -1,5 +1,5 @@
 
-![image](https://github.com/jessie214/drag_resize/blob/main/img/dragResize.gif)
+![image](https://github.com/jessie214/dataflow_chat/blob/main/img/dataflow.gif)
 =======
 
 Change window size by dragging
