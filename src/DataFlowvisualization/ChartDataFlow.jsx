@@ -1,40 +1,32 @@
 import React, { useEffect, useRef } from 'react';
-// import { Card, message, Radio, Typography } from 'antd';
 import * as echarts from 'echarts';
-// import { getDataProperty } from '@/pages/task/definitions/taskConfig';
-
-// const { Text } = Typography;
 
 const ChartDataFlow = (props) => {
   const { nodeData, linkData,getDatasetDetail,resetHeightPercent,resetWidthPercent } = props;
   const chartRef = useRef(null);
   let myChart = null;
-
- 
-
-  
   const loadChart = () => {
     myChart = echarts.init(chartRef.current);
     myChart.setOption(option);
   };
-
-
   useEffect(() => {
-    if (nodeData?.length > 0 && linkData?.length > 0) {
+    if (nodeData?.length > 0 && linkData?.length > 0) { 
       loadChart();
       onEventClick();  
     }
- 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[nodeData,linkData])
 
   // 根据缩略图设置调整chart大小
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     myChart = echarts.init(chartRef.current);
     myChart.resize();
 },[resetHeightPercent,resetWidthPercent])
 
   
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     myChart = echarts.init(chartRef.current);
     window.addEventListener('resize', () => {
       myChart.resize();
@@ -57,9 +49,12 @@ const ChartDataFlow = (props) => {
       }
       
       cacheName = name;     
-        if(!isSelected){
-          let selectedNodes = [], selectedLinks = [];
-          selectedNodes = links.filter(item => {
+      if (!isSelected) {
+          
+        // let selectedNodes = [],
+        let  selectedLinks = [];
+        // selectedNodes =
+          links.filter(item => {
                 return item.source === name || item.target === name;
             }).map(item => {
                 return [{

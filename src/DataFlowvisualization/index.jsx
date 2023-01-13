@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useRef  } from 'react';
 // import moment from 'moment';
-import { Collapse } from 'antd';
+import {Collapse } from 'antd';
 import ChartDataFlow from './ChartDataFlow';
 import ChartDataFlowSmall from './ChartDataFlowSmall';
 import { Rnd } from "react-rnd";
@@ -59,6 +59,7 @@ const Index = (props) => {
 
         dataArr.push(newDataArr);
         if (jobList && jobList?.length > 0) {
+
           jobList.map((job) => {
             let newLinkArr = {
               source: job?.name + '('+job?.id+')', // 防止name重复报错
@@ -67,8 +68,10 @@ const Index = (props) => {
               value:item?.size,
             };
             linkArr.push(newLinkArr);
+            return linkArr;
           });
         }
+        return dataArr;
       });
     }
     setNodeData(dataArr);
@@ -89,7 +92,8 @@ const Index = (props) => {
     //     }
     //   }
     // });
-  }, [formatData]);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const getDatasetDetail = (id) => {
     if (id) {
@@ -101,7 +105,6 @@ const Index = (props) => {
       // });
     }
   };
-
 
 
   // 数据颜色图例渲染

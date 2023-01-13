@@ -1,8 +1,8 @@
-import React, {  useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
 
 const ChartDataFlowSmall = (props) => {
-  const { nodeData, linkData} = props;
+  const { nodeData, linkData } = props;
   const chartRef = useRef(null);
   let myChart = null;
 
@@ -20,12 +20,14 @@ const ChartDataFlowSmall = (props) => {
     if (nodeData?.length > 0 && linkData?.length > 0) {
       loadChart();
     } 
-  },[nodeData,linkData,loadChart])
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[nodeData,linkData])
 
 
 
   
   useEffect(() => {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     myChart = echarts.init(chartRef.current);
     window.addEventListener('resize', () => {
       myChart.resize();
