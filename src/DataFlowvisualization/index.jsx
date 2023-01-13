@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useRef  } from 'react';
 // import moment from 'moment';
-import { Tabs, List, Space, message, Select, Input, Button, Drawer, Divider, Collapse } from 'antd';
+import { Collapse } from 'antd';
 import ChartDataFlow from './ChartDataFlow';
 import ChartDataFlowSmall from './ChartDataFlowSmall';
 import { Rnd } from "react-rnd";
@@ -11,11 +11,11 @@ import 'antd/dist/reset.css';
 const { Panel } = Collapse;
 
 const Index = (props) => {
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
   const [nodeData, setNodeData] = useState([]);
   const [linkData, setLinkData] = useState([]);
-  const [datasetDetail, setDatasetDetail] = useState({});
-  const [dataList, setDataList] = useState([]); // 时间轴列表
+  // const [datasetDetail, setDatasetDetail] = useState({});
+  // const [dataList, setDataList] = useState([]); // 时间轴列表
   const [resetWidthPercent, setResetWidthPercent] = useState(100); // 设置图表显示宽度百分比
   const [resetHeightPercent,setResetHeightPercent] = useState(100); // 设置图表显示百分比
   const chartViewRef = useRef()
@@ -30,13 +30,13 @@ const Index = (props) => {
   // 6: '人口学信息','#FF826F'
   // 7: '组学特征','#FF87B4'
 
-  const showDrawer = () => {
-    setVisible(!visible);
-  };
+  // const showDrawer = () => {
+  //   setVisible(!visible);
+  // };
 
-  const onClose = () => {
-    setVisible(false);
-  };
+  // const onClose = () => {
+  //   setVisible(false);
+  // };
 
   // 数据格式处理
   const formatData = (datasetList) => {
@@ -89,7 +89,7 @@ const Index = (props) => {
     //     }
     //   }
     // });
-  }, []);
+  }, [formatData]);
 
   const getDatasetDetail = (id) => {
     if (id) {
@@ -102,38 +102,7 @@ const Index = (props) => {
     }
   };
 
-  // 图标渲染
-  const renderIcon = () => {
-    let iconName = '';
-    // 临床 1,影像：2，病理：3，组学7，标注5，医生4，人口6
-    switch (datasetDetail?.dataType) {
-      case '1':
-        iconName = 'icon-linchuangshujuo';
-        break;
-      case '2':
-        iconName = 'icon-yingxiangshujuo';
-        break;
-      case '3':
-        iconName = 'icon-binglishujuo';
-        break;
-      case '4':
-        iconName = 'icon-yishengjingyano';
-        break;
-      case '5':
-        iconName = 'icon-biaozhushujuo';
-        break;
-      case '6':
-        iconName = 'icon-renkouxuexinxio';
-        break;
-      case '7':
-        iconName = 'icon-zuxuetezhengo';
-        break;
-      default:
-        break;
-    }
-    // dataList?.dataType
-    // return <SvgIcon iconName={iconName} iconColor="#A2A2A2" fontSize={'32px'} />;
-  };
+
 
   // 数据颜色图例渲染
   const renderColorList = () => {
