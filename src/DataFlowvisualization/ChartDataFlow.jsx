@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 // import { Card, message, Radio, Typography } from 'antd';
 import * as echarts from 'echarts';
 // import { getDataProperty } from '@/pages/task/definitions/taskConfig';
