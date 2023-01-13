@@ -20,7 +20,7 @@ const ChartDataFlowSmall = (props) => {
     if (nodeData?.length > 0 && linkData?.length > 0) {
       loadChart();
     } 
-  },[nodeData,linkData])
+  },[nodeData,linkData,loadChart])
 
 
 
@@ -30,7 +30,7 @@ const ChartDataFlowSmall = (props) => {
     window.addEventListener('resize', () => {
       myChart.resize();
     });
-  }, [myChart]);
+  }, []);
 
 
 
