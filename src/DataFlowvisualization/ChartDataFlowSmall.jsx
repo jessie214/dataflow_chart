@@ -1,17 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-// import { Card, message, Radio, Typography } from 'antd';
-import styles from '../index.less';
+import React, {  useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-// import { getDataProperty } from '@/pages/task/definitions/taskConfig';
-
-// const { Text } = Typography;
 
 const ChartDataFlowSmall = (props) => {
-  const { nodeData, linkData,getDatasetDetail } = props;
+  const { nodeData, linkData} = props;
   const chartRef = useRef(null);
   let myChart = null;
 
-  const colorList = ['#13A8A8', '#2F54EB', '#FA8C16', '#F5222D',  '#8BBB11', '#722ED1','#EB2F96'];
+  // const colorList = ['#13A8A8', '#2F54EB', '#FA8C16', '#F5222D',  '#8BBB11', '#722ED1','#EB2F96'];
   
 
   
@@ -35,7 +30,7 @@ const ChartDataFlowSmall = (props) => {
     window.addEventListener('resize', () => {
       myChart.resize();
     });
-  }, []);
+  }, [myChart]);
 
 
 
