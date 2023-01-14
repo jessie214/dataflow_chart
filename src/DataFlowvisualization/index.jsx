@@ -23,12 +23,12 @@ const Index = (props) => {
   const colorList = ['#44E5FA', '#7188FC', '#38EAB5', '#FFC824', '#A063F4', '#FF826F', '#FF87B4'];
 
   // 1: '临床数据', '#44E5FA'
-  // 2: '影像数据',  '#7188FC'
-  // 3: '病理数据','#38EAB5'  
-  // 4: '医生经验','#FFC824'
-  // 5: '标注数据','#A063F4'  
-  // 6: '人口学信息','#FF826F'
-  // 7: '组学特征','#FF87B4'
+  // 2: '影像数据',  '#7188FC' Image annotation
+  // 3: '病理数据','#38EAB5'   Pathological data
+  // 4: '医生经验','#FFC824' doctor experience
+  // 5: '标注数据','#A063F4'  annotation data
+  // 6: '人口学信息','#FF826F' Demographic information
+  // 7: '组学特征','#FF87B4' radiomic feature
 
   // const showDrawer = () => {
   //   setVisible(!visible);
@@ -112,25 +112,25 @@ const Index = (props) => {
     return (
       <ul className="colorListBox">
         <li>
-          <i style={{ backgroundColor: '#44E5FA' }}></i>临床数据
+          <i style={{ backgroundColor: '#44E5FA' }}></i>Clinical data
         </li>
         <li>
-          <i style={{ backgroundColor: '#7188FC' }}></i>影像标注
+          <i style={{ backgroundColor: '#7188FC' }}></i>Image annotation
         </li>
         <li>
-          <i style={{ backgroundColor: '#FF826F' }}></i>人口学信息
+          <i style={{ backgroundColor: '#FF826F' }}></i>Demographic information
         </li>
         <li>
-          <i style={{ backgroundColor: '#38EAB5' }}></i>病理数据
+          <i style={{ backgroundColor: '#38EAB5' }}></i>Pathological data
         </li>
         <li>
-          <i style={{ backgroundColor: '#A063F4' }}></i>标注数据
+          <i style={{ backgroundColor: '#A063F4' }}></i>Annotation data
         </li>
         <li>
-          <i style={{ backgroundColor: '#FF87B4' }}></i>组学特征
+          <i style={{ backgroundColor: '#FF87B4' }}></i>Radiomic feature
         </li>
         <li>
-          <i style={{ backgroundColor: '#FFC824' }}></i>医生经验
+          <i style={{ backgroundColor: '#FFC824' }}></i>Doctor experience
         </li>
       </ul>
     );
